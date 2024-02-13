@@ -1,0 +1,247 @@
+{% extends 'asos.html' %}
+{% load static %}
+{% block bosh %}
+<meta name="citation_journal_title" content="{{det_obj.journal_category.name}}">
+<meta name="citation_title" content="{{det_obj.title_art}}">
+<meta name="citation_author" content="{{det_obj.author_1}}">
+<meta name="citation_author_institution" content="{{det_obj.info_auth1}}">
+<meta name="citation_author" content="{{det_obj.author_2}}">
+<meta name="citation_author_institution" content="{{det_obj.info_auth2}}">
+<meta name="citation_author" content="{{det_obj.author_3}}">
+<meta name="citation_author_institution" content="{{det_obj.info_auth3}}">
+<meta name="citation_author" content="{{det_obj.author_4}}">
+<meta name="citation_author_institution" content="{{det_obj.info_auth4}}">
+
+<meta name="citation_publication_date" content="{{det_obj.create_data|date:'Y/m/d'}}">
+
+<meta name="citation_volume" content="{{det_obj.journal_category.page_journal}}">
+<meta name="citation_issue" content="{{det_obj.count_page}}">
+<meta name="citation_firstpage" content="{{det_obj.firs_page}}">
+<meta name="citation_lastpage" content="{{det_obj.last_page}}">
+<meta name="citation_pdf_url" content="https://journals.uzfi.uz/media/{{det_obj.file_articles}}">
+<meta name="citation_abstract_html_url" content="https://journals.uzfi.uz/media/{{det_obj.file_articles}}">
+{% endblock   %}
+
+
+{% block content %}
+
+
+
+
+   <!-- offcanvas area start -->
+   <div class="offcanvas__area" >
+      <div class="offcanvas__wrapper">
+         <div class="offcanvas__content">
+            <div class="offcanvas__close text-end">
+               <button class="offcanvas__close-btn offcanvas-close-btn">
+                  <i class="fal fa-times"></i>
+               </button>
+            </div>
+            <div class="offcanvas__top mb-40">
+               <div class="offcanvas__subtitle">
+                  <span class="text-white d-inline-block mb-25 d-none d-lg-block">ELEVATE YOUR BUSINESS WITH</span>
+               </div>
+               <div class="offcanvas__logo mb-40">
+                  <a href="index.html">
+                     <img src="assets/img/logo/logo.png" alt="logo">
+                  </a>
+               </div>
+               <div class="offcanvas-info d-none d-lg-block">
+                  <p>Limitless customization options & Elementor compatibility let anyone create a beautiful website
+                     with Valiance. </p>
+               </div>
+               <div class="offcanvas__btn d-none d-lg-block">
+                  <a href="contact.html" class="tp-btn">Contact us <span></span></a>
+               </div>
+            </div>
+            <div class="mobile-menu fix mb-40"></div>
+
+
+            <div class="offcamvas__bottom">
+               <div class="offcanvas__cta mt-30 mb-20">
+                  <h3 class="offcanvas__cta-title">Contact info</h3>
+                  <span>27 Division St, New York,</span>
+                  <span>+154 4808 84082 4830</span>
+                  <span>support@noxia.com</span>
+                  <span>Office Hours: 8AM - 5PM</span>
+                  <span>Sunday - Wekend Day</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="body-overlay"></div>
+   <!-- offcanvas area end -->
+
+   <main>
+
+      <!-- breadcrumb area start -->
+      <div class="breadcrumb__area include-bg pt-200 pb-150 breadcrumb__overlay"
+         data-background="assets/img/breadcrumb/breadcrumb-bg.jpg">
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-12">
+                  <div class="breadcrumb__content p-relative z-index-1">
+                     <h3 class="breadcrumb__title">{{ det_obj.title_art }}</h3>
+                     <div class="breadcrumb__list">
+                        <span><a href="/">Boshsahifa</a></span>
+                        <span class="dvdr"><i class="fa-regular fa-angle-right"></i></span>
+                        <span>{{ det_obj.title_art }}</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- breadcrumb area end -->
+      <!-- sidebar area end -->      
+      <div class="body-overlay"></div>
+      <!-- sidebar area end -->
+      
+        <!-- event details area start -->
+        <section class="event__inner pb-110 pt-110">
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-8 col-xl-8 col-lg-8">
+                  <h1 class="inner-tiitle mb-25">{{ det_obj.title_art }}</h1>
+<hr>
+                  <div class="course__meta-2 d-sm-flex">
+                     <div class="row">
+                        <div class="col">
+                           <!-- <img src="{{ det_obj.images.url }}" alt=""> -->
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="events__wrapper">
+                    
+                     <div class="events__details mb-35">
+                        <h3>Annotatsiya</h3>
+                        <p style="font-size: 20px;">{{det_obj.abstract}}</p>
+                     </div>
+                     <hr>
+                     <div class="events__details mb-35">
+                        <h3>Kalit so'zlar</h3>
+                        <p style="font-size: 20px;">{{det_obj.Keywords}}</p>
+                     </div>
+                     <hr>
+                      <div class="events__details mb-35">
+                        <h3>Nashr</h3>
+                        <p style="font-size: 20px;">{{det_obj.journal_category.name}}</p>
+                        <p style="font-size: 20px;">Nashr qilingan:{{det_obj.create_data|date:'d/m/Y' }}</p>
+                        <p style="font-size: 20px;">Bo'lim:{{det_obj.type_art }}</p>
+                        <p style="font-size: 20px;">Sahifalar:{{det_obj.firs_page }}-{{det_obj.last_page }}</p>
+                     
+                        <span><a href="/media/{{det_obj.file_articles}}" download="/media/{{det_obj.file_articles}}" target="_blank"  class="more-btn">
+                                                   
+
+                           <button type="button" class="btn btn-success">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+             <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+           </svg>
+           Yuklash
+                         </button></a></span>
+                     </div>
+                     <hr>
+                  </div>
+               </div>
+               <div class="col-xxl-4 col-xl-4 col-lg-4">
+                  <div class="events__sidebar pl-70">
+                     <div class="events__sidebar-widget white-bg mb-20">
+                        <div class="events__info">
+                           <div class="events__info-meta mb-25 d-flex align-items-center justify-content-between">
+                              <div class="events__info-price">
+                                 <h5>Mualliflar </h5>
+                                
+                              </div>
+                              
+                           </div>
+                           <div class="events__info-content mb-35">
+                              <ul>
+                               
+                                 {% if det_obj.author_1 %}
+                                 <li class="d-flex align-items-center">
+                                    
+                                    
+                                    <a href="#" class="tp-btn w-100">
+                                       <span>{{det_obj.author_1}}<i class="fa-regular"></i> </span>
+                                       {{det_obj.info_auth1}}
+                                       <div class="transition"></div>
+                                    </a>
+                                   
+                                 </li>
+                                 {% endif %}
+                                 {% if det_obj.author_2 %}
+                                 <li class="d-flex align-items-center">
+                                    
+                                    
+                                    <a href="#" class="tp-btn w-100">
+                                       <span>{{det_obj.author_2}}<i class="fa-regular"></i> </span>
+                                       {{det_obj.info_auth2}}
+                                       <div class="transition"></div>
+                                    </a>
+                                   
+                                 </li>
+                                 {% endif %}
+                                 {% if det_obj.author_3 %}
+                                 <li class="d-flex align-items-center">
+                                    
+                                    
+                                    <a href="#" class="tp-btn w-100">
+                                       <span>{{det_obj.author_3}}<i class="fa-regular"></i> </span>
+                                       {{det_obj.info_auth3}}
+                                       <div class="transition"></div>
+                                    </a>
+                                   
+                                 </li>
+                                 {% endif %}
+                                 {% if det_obj.author_4 %}
+                                 <li class="d-flex align-items-center">
+                                    
+                                    
+                                    <a href="#" class="tp-btn w-100">
+                                       <span>{{det_obj.author_4}}<i class="fa-regular"></i> </span>
+                                       {{det_obj.info_auth4}}
+                                       <div class="transition"></div>
+                                    </a>
+                                   
+                                 </li>
+                                 {% endif %}
+                                 
+                                
+                                
+                              </ul>
+                           </div>
+                         
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+   
+      <!-- event details area end -->
+
+
+       
+
+      </main>
+
+        <!-- breadcrumb area start -->
+      
+     <!-- course area end -->
+      <!-- <h1>{{ det_obj.name }}</h1>
+      <img src="{{ det_obj.images.url }}" alt="{{ det_obj.name }}">
+      <p>{{ det_obj.info }}</p>
+      
+      <h2>Journals</h2>
+      <ul>
+          {% for journal in journals %}
+              <li>{{ journal.name }}</li>
+          {% endfor %}
+      </ul>
+      
+   -->
+      {% endblock %}

@@ -1,0 +1,7 @@
+django==4.1.2
+djangorestframework
+django-cors-headers
+Pillow
+django-ckeditor
+django-modeltranslation
+psycopg2-binary

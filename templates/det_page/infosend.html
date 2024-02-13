@@ -1,0 +1,176 @@
+{% extends 'asos.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+   <!-- offcanvas area start -->
+   <div class="offcanvas__area" >
+      <div class="offcanvas__wrapper">
+         <div class="offcanvas__content">
+            <div class="offcanvas__close text-end">
+               <button class="offcanvas__close-btn offcanvas-close-btn">
+                  <i class="fal fa-times"></i>
+               </button>
+            </div>
+            <div class="offcanvas__top mb-40">
+               <div class="offcanvas__subtitle">
+                  <span class="text-white d-inline-block mb-25 d-none d-lg-block">ELEVATE YOUR BUSINESS WITH</span>
+               </div>
+               <div class="offcanvas__logo mb-40">
+                  <a href="index.html">
+                     <img src="assets/img/logo/logo.png" alt="logo">
+                  </a>
+               </div>
+               <div class="offcanvas-info d-none d-lg-block">
+                  <p>Limitless customization options & Elementor compatibility let anyone create a beautiful website
+                     with Valiance. </p>
+               </div>
+               <div class="offcanvas__btn d-none d-lg-block">
+                  <a href="contact.html" class="tp-btn">Contact us <span></span></a>
+               </div>
+            </div>
+            <div class="mobile-menu fix mb-40"></div>
+
+
+            <div class="offcamvas__bottom">
+               <div class="offcanvas__cta mt-30 mb-20">
+                  <h3 class="offcanvas__cta-title">Contact info</h3>
+                  <span>27 Division St, New York,</span>
+                  <span>+154 4808 84082 4830</span>
+                  <span>support@noxia.com</span>
+                  <span>Office Hours: 8AM - 5PM</span>
+                  <span>Sunday - Wekend Day</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="body-overlay"></div>
+   <!-- offcanvas area end -->
+
+   <main>
+
+      <!-- breadcrumb area start -->
+      <div class="breadcrumb__area include-bg pt-200 pb-150 breadcrumb__overlay"
+         data-background="assets/img/breadcrumb/breadcrumb-bg.jpg">
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-12">
+                  <div class="breadcrumb__content p-relative z-index-1">
+                     <h3 class="breadcrumb__title">{{ journal_category.name }}</h3>
+                     <div class="breadcrumb__list">
+                        <span style="text-transform: uppercase;"><a href="/">Bosh sahifa</a></span>
+                        <span  class="dvdr"><i class="fa-regular fa-angle-right"></i></span>
+                        <span style="text-transform: uppercase;">{{journal_info.title }}</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- breadcrumb area end -->
+      <!-- sidebar area end -->      
+      <div class="body-overlay"></div>
+      <!-- sidebar area end -->
+      
+        <!-- event details area start -->
+        <section class="event__inner pb-110 pt-110">
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-8 col-xl-8 col-lg-8">
+                  <h1 class="inner-tiitle mb-25">{{ journal_info.title }}</h1>
+<hr>
+                  <div class="course__meta-2 d-sm-flex">
+                     <div class="row">
+                        <div class="col">
+                           <!-- <img src="{{ journal_category.images.url }}" alt=""> -->
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="events__wrapper">
+                     
+                     <div class="events__details mb-35">
+                        <h3>Tavsif</h3>
+                        <p>{{journal_info.body|safe}}</p>
+                     </div>
+                     <hr>
+                   
+                  </div>
+               </div>
+               <div class="col-xxl-4 col-xl-4 col-lg-4">
+                  <div class="events__sidebar pl-70">
+                     <div class="events__sidebar-widget white-bg mb-20">
+                        <div class="events__info">
+                           <div class="events__info-meta mb-25 d-flex align-items-center justify-content-between">
+                              <div class="events__info-price">
+                                 <h5>JURNAL HAQIDA </h5>
+                                
+                              </div>
+                              
+                           </div>
+                           <div class="events__info-content mb-35">
+                              <ul>
+                               
+                                 
+                                 <li class="d-flex align-items-center">
+                                    
+                                    <a href="http://journals.uzfi.uz/category/1/" class="tp-btn w-100">
+                                       <span>Umumiy ma'lumot<i class="fa-regular fa-arrow-right"></i> </span>
+                                       <div class="transition"></div>
+                                    </a>
+                                   
+                                 </li>
+                                 <li class="d-flex align-items-center">
+                                    
+                                    <a href="http://journals.uzfi.uz/journal/3/" class="tp-btn w-100">
+                                       <span>Maqola yuborish talablari<i class="fa-regular fa-arrow-right"></i> </span>
+                                       <div class="transition"></div>
+                                    </a>
+                                   
+                                 </li><li class="d-flex align-items-center">
+                                    
+                                    <a href="http://journals.uzfi.uz/journal_archive/1/" class="tp-btn w-100">
+                                       <span>Arxiv<i class="fa-regular fa-arrow-right"></i> </span>
+                                       <div class="transition"></div>
+                                    </a>
+                                   
+                                 </li>
+                                
+                                
+                              </ul>
+                           </div>
+                         
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+   
+      <!-- event details area end -->
+
+
+       
+
+      </main>
+
+        <!-- breadcrumb area start -->
+      
+     <!-- course area end -->
+      <!-- <h1>{{ journal_category.name }}</h1>
+      <img src="{{ journal_category.images.url }}" alt="{{ journal_category.name }}">
+      <p>{{ journal_category.info }}</p>
+      
+      <h2>Journals</h2>
+      <ul>
+          {% for journal in journals %}
+              <li>{{ journal.name }}</li>
+          {% endfor %}
+      </ul>
+      
+   -->
+      {% endblock %}
