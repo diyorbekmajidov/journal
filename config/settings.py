@@ -33,6 +33,7 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'ckeditor',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -107,14 +109,27 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
+from django.utils.translation import gettext_lazy as _
+MODELTRANSLATION_DEFAULT_LANGUAGE  = ('uz')
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uz-uz'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
+
+LANGUAGES = (
+    ('uz',  _('Uzbek')),
+    ('ru',  _('Russian')),
+    ('en',  _('English')),
+)
+
+
+MODELTRANSLATION_LANGUAGES = ('en', 'uz', 'ru')
 
 
 # Static files (CSS, JavaScript, Images)
