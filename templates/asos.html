@@ -6,7 +6,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title> O’zbekiston-Finlandiya pedagogika instituti jurnallari sayti</title>
+   <title>{% blocktranslate %}O&acute;zbekiston-Finlandiya pedagogika instituti jurnallari sayti{% endblocktranslate %}</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="google-site-verification" content="nFpchmXty0q-Oq4cbSdMm5OMDPjykpUrBwevr7wKRhM" />
@@ -83,35 +83,35 @@
                         <nav id="mobile-menu">
                            <ul>
                                  <li>
-                                    <a href="/">BOSH SAHIFA</a>
+                                    <a href="/">{% blocktranslate %}OSH SAHIFA{% endblocktranslate %}</a>
                            
                               </li>
                               <li>
-                                 <a href="#">JURNAL</a>
+                                 <a href="#">{% blocktranslate %}JURNAL{% endblocktranslate %}</a>
                                  <ul class="submenu">
                                     {% for category in journal_categories %}
                                     <li><a href="{% url 'category' category.pk %}">{{ category.name }}</a></li>
                                     <hr>
                                     {% endfor %}
                                     
-                                   <li>   <a href="http://journals.uzfi.uz/journal_archive/1/">Nashrlar
+                                   <li>   <a href="http://journals.uzfi.uz/journal_archive/1/">{% blocktranslate %}Nashrlar{% endblocktranslate %}
                                  </a> </li>
                                     
                                  </ul>
                                  
                            
                               </li>  <li>
-                                 <a href="http://journals.uzfi.uz/journal/2/">JURNALI HAQIDA
+                                 <a href="http://journals.uzfi.uz/journal/2/">{% blocktranslate %}JURNALI HAQIDA{% endblocktranslate %}
                                  </a>
                            
                               </li>
                               <li>
-                                 <a href="http://journals.uzfi.uz/journal/3/">MUALLIFLAR UCHUN
+                                 <a href="http://journals.uzfi.uz/journal/3/">{% blocktranslate %}MUALLIFLAR UCHUN{% endblocktranslate %}
                                  </a>
                            
                               </li>
                               <li>
-                                 <a href="http://journals.uzfi.uz/journal/4/">TAHRIRIYAT JAMOASI
+                                 <a href="http://journals.uzfi.uz/journal/4/">{% blocktranslate %}TAHRIRIYAT JAMOASI{% endblocktranslate %}
                                  </a>
                            
                               </li>
@@ -150,7 +150,7 @@
                                  </ul>
                               </li> -->
                               <li>
-                                 <a href="http://journals.uzfi.uz/journal/5/">ALOQA</a>
+                                 <a href="http://journals.uzfi.uz/journal/5/">{% blocktranslate %}ALOQA{% endblocktranslate %}</a>
                               </li>
                            </ul>
                         </nav>
@@ -194,9 +194,9 @@
                           <a href="index.html"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
                         </div> -->
                         <div class="footer__widget-content">
-                           <p>O'ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI</p>
+                           <p>{% blocktranslate %}O&acute;ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI{% blocktranslate %}</p>
                            <div class="footer__social"> 
-				<h5>ijtimoiy tarmoqlari</h5>
+				<h5>{% blocktranslate %}ijtimoiy tarmoqlari{% endblocktranslate %}</h5>
 <br> 
  				<span><a href="http://uzfi.uz" class="tw"><i class="fab fa-google"></i></a></span>
                               <span><a href="https://t.me/UzFiPI" class=""><i class="fab fa-telegram"></i></a></span>
@@ -209,12 +209,12 @@
                   </div>
                   <div class="col-xxl-3 col-xl-3 col-lg-3 col-6">
                      <div class="footer__widget mb-50 footer-col-3">
-                        <h6 class="footer__widget-title">Jurnal haqida</h6>
+                        <h6 class="footer__widget-title">{% blocktranslate %}Jurnal haqida{% endblocktranslate %}</h6>
                         <div class="footer__widget-content">
                            <ul>
-                              <li><a href="http://journals.uzfi.uz/category/1/#">Umumiy ma'lumot</a></li>
-                              <li><a href="http://journals.uzfi.uz/journal/1/">Maqola yuborish talablari</a></li>
-                              <li><a href="http://journals.uzfi.uz/journal_archive/1/">Arxiv</a></li>
+                              <li><a href="http://journals.uzfi.uz/category/1/#">{% blocktranslate %}Umumiy ma'lumot{% endblocktranslate %}</a></li>
+                              <li><a href="http://journals.uzfi.uz/journal/1/">{% blocktranslate %}Maqola yuborish talablari{% endblocktranslate %}</a></li>
+                              <li><a href="http://journals.uzfi.uz/journal_archive/1/">{% blocktranslate %}Arxiv{% endblocktranslate %}</a></li>
                             
                            </ul>
                         </div>
@@ -222,13 +222,13 @@
                   </div>
                   <div class="col-xxl-3 col-xl-3 col-lg-3 col-6">
                      <div class="footer__widget mb-50 footer-col-3">
-                        <h3 class="footer__widget-title">Rekvizitlar</h3>
+                        <h3 class="footer__widget-title">{% blocktranslate %}Rekvizitlar{% endblocktranslate %}</h3>
                         <div class="footer__widget-content">
                            <ul>
                               <li><a href="#">Tel:(66) 222-69-27</a></li>
-                              <li>Manzil:<b>  Samarqand shahri, Spitamen shox ko‘chasi 166-uy. O‘zbekiston-Finlandiya pedagogika instituti binosida,
-<br>Pochta indeksi: 140100
-Telefon: (93) 358-58-69
+                              <li>{% blocktranslate %}Manzil:{% endblocktranslate %}<b>  {% blocktranslate %}Samarqand shahri, Spitamen shox ko&acute;chasi 166-uy. O&acute;zbekiston-Finlandiya pedagogika instituti binosida,{% endblocktranslate %}
+<br>{% blocktranslate %}Pochta indeksi: 140100
+Telefon: (93) 358-58-69{% endblocktranslate %}
 <br>e-mail: uzfijurnal@uzfi.uz 
 </b></li>
                                               
